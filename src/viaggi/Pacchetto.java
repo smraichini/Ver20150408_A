@@ -6,7 +6,7 @@ public class Pacchetto {
 	private String ID;
 	private String descrizione;
 	private int postiTotali;
-	private Vector prenotazioni=null;
+	private Vector prenotazioni=new Vector();
 
 	public Pacchetto(String ID, String descrizione, int postiTotali){
 		if(ID.length()>0)
@@ -42,7 +42,7 @@ public class Pacchetto {
 	}
 	
 	public void addPrenotazione(Prenotazione p){
-		
+		prenotazioni.addElement(p);
 	}
 	
 	public Vector getPrenotazioni(){
